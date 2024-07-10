@@ -1,4 +1,4 @@
-# Collage: Light-Weight Low-Precision Strategy for LLM Training
+# [Collage: Light-Weight Low-Precision Strategy for LLM Training](https://arxiv.org/abs/2405.03637)
 
 [![preprint](https://img.shields.io/static/v1?label=arXiv&message=2403.07815&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2405.03637)
 [![License: MIT](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -21,17 +21,12 @@ Requirements
 
 We recommend using NeMo ``r1.22.0`` with released container ``nemo:23.11``
 
-.. code-block:: bash
-
     docker pull nvcr.io/nvidia/nemo:23.11.framework
 
 Datasets
 --------
 
-Please follow `"AWS-Neuron-Tutorials-BERT" <https://awsdocs-neuron.readthedocs-hosted.com/en/latest/frameworks/torch/torch-neuronx/tutorials/training/bert.html#hf-bert-pretraining-tutorial>`_ to 
-download the tokenized wikicorpus file for BERT and RoBERTa
-
-.. code-block:: bash
+Please follow [AWS-Neuron-Tutorials-BERT](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/frameworks/torch/torch-neuronx/tutorials/training/bert.html#hf-bert-pretraining-tutorial) to download the tokenized wikicorpus file for BERT and RoBERTa
 
     mkdir -p ./examples_datasets/
     pushd ./examples_datasets/
@@ -43,10 +38,8 @@ download the tokenized wikicorpus file for BERT and RoBERTa
     rm bert_pretrain_wikicorpus_tokenized_hdf5_seqlen512.tar
     popd
 
-Please follow `"AWS-Neuron-Examples-GPT" <https://github.com/aws-neuron/aws-neuron-parallelcluster-samples/blob/master/examples/jobs/neuronx-nemo-megatron-gpt-job.md>`_ to 
+Please follow [AWS-Neuron-Examples-GPT](https://github.com/aws-neuron/aws-neuron-parallelcluster-samples/blob/master/examples/jobs/neuronx-nemo-megatron-gpt-job.md) to 
 download the wikipedia dataset that is stored in s3
-
-.. code-block:: bash
 
     export DATA_DIR=./examples_datasets/gpt2
     mkdir -p ${DATA_DIR} && cd ${DATA_DIR}
@@ -59,15 +52,13 @@ download the wikipedia dataset that is stored in s3
 Examples
 --------
 
-Scripts for training BERT and RoBERTa are provided in `"roBERTa/scripts" <https://github.com/ydtydr/Trn-ext-nemo-neox/tree/gpu_nemo_r1.22.0/roBERTa/scripts>`_ folder.
-Scripts for multi-size (125M, 1.3B, 2.7B and 6.7B) GPTs can be found in `"NeMo-GPT/scripts/nlp_language_modeling" <https://github.com/ydtydr/Trn-ext-nemo-neox/tree/gpu_nemo_r1.22.0/NeMo-GPT/scripts/nlp_language_modeling>`_ folder. 
+Scripts for training BERT and RoBERTa are provided in [`roBERTa/scripts`](https://github.com/amazon-science/collage/tree/main/roBERTa/scripts) folder.
+Scripts for multi-size (125M, 1.3B, 2.7B and 6.7B) GPTs can be found in [`NeMo-GPT/scripts/nlp_language_modeling`](https://github.com/amazon-science/collage/tree/main/NeMo-GPT/scripts/nlp_language_modeling) folder. 
 
 Cite us
 ------------
 
 If you find our works helpful in your research, please consider citing the following paper:
-
-.. code:: bibtex
 
     @inproceedings{yu2024collage,
         title={Collage: Light-Weight Low-Precision Strategy for LLM Training},
@@ -79,7 +70,7 @@ If you find our works helpful in your research, please consider citing the follo
 
 License
 -------
-NeMo-GPT is modified from NVIDIA NeMo, which is released under an `Apache 2.0 license <https://github.com/NVIDIA/NeMo/blob/stable/LICENSE>`.
+NeMo-GPT is modified from NVIDIA NeMo, which is released under an [`Apache 2.0 license`](https://github.com/NVIDIA/NeMo/blob/stable/LICENSE).
 
 Modifications Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
