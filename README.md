@@ -1,7 +1,7 @@
-**Collage: Light-Weight Low-Precision Strategy for LLM Training**
+# Collage: Light-Weight Low-Precision Strategy for LLM Training
 
-[ArXiv](<https://arxiv.org/abs/2405.03637>)
-===============
+[![preprint](https://img.shields.io/static/v1?label=arXiv&message=2403.07815&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2405.03637)
+[![License: MIT](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Introduction
 ------------
