@@ -32,7 +32,7 @@ def Grow_Exp_addcmul_(tensor_m, tensor_r, t1, t2, v):
 def MultMC_(tensor_m, tensor_r, val_m, val_r):
     # tensor_m, tensor_r can be modified in-place
     # val_m, val_r are scalars
-    result_m = tensor_m.mul_(val_m)
+    result_m = tensor_m * val_m
     value = torch.addcmul(-result_m, tensor_m, val_m)
     tensor_r.mul_(val_m).addcmul_(tensor_m, val_r).add_(value)
     tensor_m.copy_(result_m + tensor_r)
